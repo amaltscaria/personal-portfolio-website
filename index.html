@@ -27,6 +27,7 @@
   <!-- Template Main CSS File -->
   
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
@@ -46,6 +47,7 @@
           <li><a class="nav-link active" href="#header">Home</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#resume">Resume</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
           <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -368,7 +370,69 @@
 
     </div>
   </section><!-- End Resume Section -->
+ <!-- ======= Services Section ======= -->
+ <section id="services" class="services">
+  <div class="container">
 
+    <div class="section-title">
+      <h2>Services</h2>
+      <p>My Services</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bxl-dribbble"></i></div>
+          <h4><a href="">Web Development</a></h4>
+          <p>n my web development portfolio, I showcase my expertise in creating visually appealing and fully functional websites from scratch, ensuring they adapt seamlessly to various screen sizes and devices for an enhanced user experience.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-file"></i></div>
+          <h4><a href="">Responsive Design</a></h4>
+          <p>I excel in responsive design, crafting websites that not only look great on desktops but also on mobile devices, offering a user-friendly experience across the digital landscape.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-tachometer"></i></div>
+          <h4><a href="">Web Hosting and Deployment</a></h4>
+          <p>
+            In my portfolio, I showcase my proficiency in web hosting and deployment, illustrating my capability to set up robust hosting environments and seamlessly deploy web applications. I ensure that websites I create not only perform exceptionally but are also securely hosted to provide a reliable online presence for my clients.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-world"></i></div>
+          <h4><a href="">UI/UX Design:</a></h4>
+          <p>With a keen eye for UI/UX design, I elevate web experiences by integrating intuitive and visually pleasing user interfaces, prioritizing user experience excellence in every project I undertake.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-slideshow"></i></div>
+          <h4><a href="">Portfolio Websites</a></h4>
+          <p>My dedication to web accessibility shines through in my portfolio, showcasing websites I've built that adhere to accessibility standards, ensuring inclusivity for all users, regardless of their abilities.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-arch"></i></div>
+          <h4><a href="">Maintenance and Support</a></h4>
+          <p>provide comprehensive website maintenance and support services, ensuring that my clients' online presence remains up-to-date, secure, and optimized for peak performance long after the initial development phase.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Services Section -->
 
   <!-- ======= Portfolio Section ======= -->
   <section id="portfolio" class="portfolio">
@@ -484,10 +548,10 @@
             <i class="bx bx-share-alt"></i>
             <h3>Social Profiles</h3>
             <div class="social-links">
-              <a href="https://twitter.com/AmalTScaria1" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.facebook.com/amalt.scaria.9" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/amal.t.scaria/" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/amal-t-scaria-221848193/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <a href="https://twitter.com/AmalTScaria1" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.facebook.com/amalt.scaria.9" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/amal.t.scaria/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/amal-t-scaria-221848193/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -507,7 +571,28 @@
           </div>
         </div>
       </div>
-
+      <form id = "submit-form" action=""  role="form" class="php-email-form mt-4">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button id="submit-btn" type="submit">Send Message</button></div>
+      </form>
     </div>
   </section><!-- End Contact Section -->
 
@@ -526,6 +611,35 @@
   <!-- font-awesome -->
   
   <script src="https://kit.fontawesome.com/34b95b40fc.js" crossorigin="anonymous"></script>
+
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbww4wGjSsbDZYPzrl6kimQbUfVAfSBSC7UAcLUhQnwv7jCxx8QBQ8MBgCl75qpkiJ6fSA/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                
+               
+                var originalText = $("#submit-btn").text();
+                $("#submit-btn").text("Success");
+                setTimeout(function () {
+                        $("#submit-btn").text(originalText);
+                    }, 2000);
+                    setTimeout(function () {
+                      window.location.reload()
+                    }, 2000);
+                    
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
 
 </body>
 
